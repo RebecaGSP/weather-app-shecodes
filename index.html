@@ -10,75 +10,72 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div class= "container">
-        <div class= "title row border-bottom">
-            <h1>What the Weather?</h1>
-        </div>
-        <div class= "row p-5">
-            <div class="card" style="width: 100%;">
-            <div class="card-body">
-                    <form id="search-form">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search for a city" id="search-city">
-                            <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
-                            <div class="filters">
-                                    <i class="fas fa-map-marker-alt" id="current-location"></i>
-                                    <i class="fas fa-heart"></i>
-                                </div>
+    <div class= "container" style="width: 80%; display: block; margin: 0 auto; padding: 20px;">
+            <div class="card" >
+                <h1 class="title">What the Weather?</h1>
+                <div class="card-body">
+                        <form id="search-form">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search for a city" id="search-city">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+                                <div class="filters">
+                                        <i class="fas fa-map-marker-alt" id="current-location"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                            </div>
+                        </form>
+                    <div class="weatherInfo row">
+                        <div class="selectedCity col-3 border-right">
+                            <h1 id="current-city"></h1>
+                            <h5 id="current-date"></h5> 
+                            <span id="actual-temperature" class="actual-temperature"></span><a href="#" id="celsius"> ºC</a>|<a href="#" id="farenheit">ºF</a>                    
+                        </br>
+                            <i class="fas fa-sun"></i>
+                        </br>
+                            <p>
+                                Precipitation: 0% <br>
+                                Wind: <span id="wind">0</span> mph <br>
+                                Humidity: <span id="humidity">0</span>% 
+                            </p>
                         </div>
-                    </form>
-                <div class="weatherInfo row">
-                    <div class="selectedCity col-3 border-right">
-                        <h1 id="current-city"></h1>
-                        <h5 id="current-date"></h5> 
-                        <span id="actual-temperature" class="actual-temperature"></span><a href="#" id="celsius"> ºC</a>|<a href="#" id="farenheit">ºF</a>                    
-                    </br>
-                        <i class="fas fa-sun"></i>
-                    </br>
-                        <p>
-                            Precipitation: 0% <br>
-                            Wind: <span id="wind">0</span> mph <br>
-                            Humidity: <span id="humidity">0</span>% 
-                        </p>
-                    </div>
-                    <div class="col-9">
-                        <div class="row p-5">
-                            <div class="monday col">
-                                <h3>MON</h3>
-                                <h4>27ºC</h4>
-                                <h4>80.6ºF</h4>
-                            <i class="fas fa-sun"></i>
-                            </div>
-                            <div class="tuesday col">
-                                <h3>TUE</h3>
-                                <h4>27ºC</h4>
-                                <h4>80.6ºF</h4>
-                            <i class="fas fa-cloud-rain"></i>
-                            </div>
-                            <div class="wednesday col">
-                                <h3>WED</h3>
-                                <h4>27ºC</h4>
-                                <h4>80.6ºF</h4>
-                            <i class="fas fa-sun"></i>
-                            </div>
-                            <div class="thrusday col">
-                                <h3>THU</h3>
-                                <h4>27ºC</h4>
-                                <h4>80.6ºF</h4>
-                            <i class="fas fa-cloud-rain"></i>
-                            </div>
-                            <div class="friday col">
-                                <h3>FRI</h3>
-                                <h4>27ºC</h4>
-                                <h4>80.6ºF</h4>
-                            <i class="fas fa-sun"></i>
+                        <div class="col-9">
+                            <div class="row p-5">
+                                <div class="monday col">
+                                    <h3>MON</h3>
+                                    <h4>27ºC</h4>
+                                    <h4>80.6ºF</h4>
+                                <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="tuesday col">
+                                    <h3>TUE</h3>
+                                    <h4>27ºC</h4>
+                                    <h4>80.6ºF</h4>
+                                <i class="fas fa-cloud-rain"></i>
+                                </div>
+                                <div class="wednesday col">
+                                    <h3>WED</h3>
+                                    <h4>27ºC</h4>
+                                    <h4>80.6ºF</h4>
+                                <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="thrusday col">
+                                    <h3>THU</h3>
+                                    <h4>27ºC</h4>
+                                    <h4>80.6ºF</h4>
+                                <i class="fas fa-cloud-rain"></i>
+                                </div>
+                                <div class="friday col">
+                                    <h3>FRI</h3>
+                                    <h4>27ºC</h4>
+                                    <h4>80.6ºF</h4>
+                                <i class="fas fa-sun"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
+            <p><a href="https://github.com/RebecaGSP/weather-app-shecodes">open-source-code </a>By RebecaGSP</p></p>
     </div>
     <script src="src/index.js"></script>
 </body>
