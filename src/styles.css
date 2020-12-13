@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Kaushan+Script&display=swap");
+
+h1 {
+  text-align: left;
+  width: 100%;
+  font-family: "Kaushan Script";
+}
+
+p {
+  font-weight: lighter;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.weatherInfo i {
+  font-size: 60px;
+}
+
+.title {
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+  color: #fff;
+}
+
+.selectedCity h2 {
+  color: #fd8c04;
+}
+
+.selectedCity i {
+  color: #fd8c04;
+}
+
+.monday h4 {
+  color: #fd8c04;
+}
+
+.tuesday h4 {
+  color: #93abd3;
+}
+
+.wednesday h4 {
+  color: #ec5858;
+}
+
+.thrusday h4 {
+  color: #93abd3;
+}
+
+.friday h4 {
+  color: #fd8c04;
+}
+
+.monday i {
+  color: #fd8c04;
+}
+
+.tuesday i {
+  color: #93abd3;
+}
+
+.wednesday i {
+  color: #ec5858;
+}
+
+.thrusday i {
+  color: #93abd3;
+}
+
+.friday i {
+  color: #fd8c04;
+}
+
+.fa-map-marker-alt {
+  margin: 4px;
+  color: orange;
+  font-size: 30px;
+}
+.fa-heart {
+  margin: 4px;
+  color: red;
+  font-size: 30px;
+}
+
+.actual-temperature {
+  font-size: 50px;
+}
+
+.celsius {
+  font-size: 15px;
+  position: relative;
+  top: -34px;
+}
+
+.farenheit {
+  font-size: 15px;
+  position: relative;
+  top: -34px;
+}
