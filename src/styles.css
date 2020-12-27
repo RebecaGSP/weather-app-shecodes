@@ -23,29 +23,6 @@ li {
   text-transform: capitalize;
 }
 
-.weather-app-wrapper {
-  max-width: 80%; 
-  display: block; 
-  margin: 0 auto; 
-  padding: 20px;
-}
-
-.weatherInfo i {
-  font-size: 60px;
-  
-}
-
-.actual-temperature h2{
-  font-size: 60px;
-  line-height: 1;
-  font-weight: lighter;
-  padding-left: 10px;
-}
-
-.actual-temperature span{
-  font-weight: lighter;
-}
-
 .title {
   background-image: linear-gradient(
     to right,
@@ -60,8 +37,43 @@ li {
   text-align: center;
 }
 
+.weather-app-wrapper {
+  max-width: 80%; 
+  display: block; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.weatherInfo i {
+  font-size: 60px;
+}
+
+.actual-temperature h2{
+  font-size: 35px;
+  line-height: 1.5;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+.actual-temperature a{
+  line-height: 1.5;
+}
+
+.actual-temperature span{
+  font-weight: lighter;
+}
+
+.actual-temperature .inactive {
+  color: black;
+  cursor: default;
+}
+
+.actual-temperature .inactive:hover {
+  text-decoration: none;
+}
+
 .selectedCity img {
-  width: 70px;
+  width: 60px;
 }
 
 .selectedCity h4 {
@@ -72,6 +84,17 @@ li {
 .selectedCity h5 {
   text-transform: capitalize;
   font-weight: lighter;
+}
+
+.fa-map-marker-alt {
+  margin: 4px;
+  color: orange;
+  font-size: 30px;
+}
+.fa-heart {
+  margin: 4px;
+  color: red;
+  font-size: 30px;
 }
 
 .monday h4 {
@@ -112,28 +135,4 @@ li {
 
 .friday i {
   color: #fd8c04;
-}
-
-.fa-map-marker-alt {
-  margin: 4px;
-  color: orange;
-  font-size: 30px;
-}
-.fa-heart {
-  margin: 4px;
-  color: red;
-  font-size: 30px;
-}
-
-
-.celsius {
-  font-size: 15px;
-  position: relative;
-  top: -34px;
-}
-
-.farenheit {
-  font-size: 15px;
-  position: relative;
-  top: -34px;
 }

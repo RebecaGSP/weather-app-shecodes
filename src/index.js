@@ -23,23 +23,26 @@ function formatDate(timestamp) {
 }
 
 //Celsius to Farenheit
-function celsiusUnits(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#actual-temperature");
-  temperature.innerHTML = "27";
-}
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", celsiusUnits);
+let celsiusTemperature = null;
 
 function farenheitUnits(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#actual-temperature");
-  temperature.innerHTML = "80.6";
+  document.querySelector("#celsius").classList.remove("inactive");
+  document.querySelector("#farenheit").classList.add("inactive");
+  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32; 
+  document.querySelector("#actual-temperature").innerHTML = Math.round(farenheitTemperature);
 }
 
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", farenheitUnits);
+document.querySelector("#farenheit").addEventListener("click", farenheitUnits);
+
+function celsiusUnits(event) {
+  event.preventDefault();
+  document.querySelector("#farenheit").classList.remove("inactive");
+  document.querySelector("#celsius").classList.add("inactive");
+  document.querySelector("#actual-temperature").innerHTML = Math.round(celsiusTemperature);
+}
+
+document.querySelector("#celsius").addEventListener("click", celsiusUnits);
 
 //City search
 function getTemperature(response) {
@@ -53,6 +56,7 @@ function getTemperature(response) {
   document.querySelector("#current-date").innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
