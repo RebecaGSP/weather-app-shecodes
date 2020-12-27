@@ -64,6 +64,11 @@ li {
   color: #fd8c04;
 }
 
+.selectedCity h4 {
+  text-transform: capitalize;
+  font-size: 10px;
+}
+
 .selectedCity h5 {
   text-transform: capitalize;
   font-weight: lighter;

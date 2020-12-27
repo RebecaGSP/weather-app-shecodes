@@ -1,24 +1,21 @@
 //Current Date
-let date = new Date();
-
-function formatDate() {
-  let weekDays = [
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let weekDay = [
     "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
+    "Friday",
     "Saturday"
   ];
-  let weekDay = weekDays[date.getDay()];
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
-  let formattedDate = `${weekDay}, ${hour}: ${minutes}`;
-  return formattedDate;
+  let day = weekDay[date.getDay()];
+  //let formattedDate = `${weekDay}, ${hour}: ${minutes}`;
+  return `${day}, ${hour}:${minutes}`;
 }
-
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = formatDate(date);
 
 //Celsius to Farenheit
 function celsiusUnits(event) {
@@ -43,12 +40,14 @@ farenheit.addEventListener("click", farenheitUnits);
 //Week 5
 //City search
 function getTemperature(response) {
+  console.log(response.data)
   let currentTemperature = Math.round(response.data.main.temp);
   document.querySelector("#actual-temperature").innerHTML = currentTemperature;
   document.querySelector("#current-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#current-date").innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function search(city) {
