@@ -1,46 +1,3 @@
-// Week 3 HW Code
-/*
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20
-  }
-};
-let city = prompt("Enter a city");
-city = city.toLowerCase().trim();
-console.log(city);
-console.log(weather);
-console.log(weather[city]);
-
-if (weather[city] !== undefined) {
-  let farenheitTemp = Math.round((weather[city].temp * 9) / 5 + 32);
-
-  alert(
-    `It is currently ${weather[city].temp}°C (${farenheitTemp}°F) in ${city} with a humidity of ${weather[city].humidity}%`
-  );
-} else {
-  alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-  );
-}*/
-
-//Week 4 HW Code
 //Current Date
 let date = new Date();
 
@@ -88,6 +45,7 @@ farenheit.addEventListener("click", farenheitUnits);
 function getTemperature(response) {
   let currentTemperature = Math.round(response.data.main.temp);
   document.querySelector("#actual-temperature").innerHTML = currentTemperature;
+  document.querySelector("#current-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
@@ -97,7 +55,6 @@ function search(city) {
   let apiKey = "48b09ccbd64506cbc4fe7db34fbff847";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(getTemperature);
-
 }
 
 function handleSubmit(event) {
