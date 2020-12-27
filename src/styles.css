@@ -44,8 +44,8 @@ li {
   padding: 20px;
 }
 
-.weatherInfo i {
-  font-size: 60px;
+.weatherInfo img {
+  width: 60px;
 }
 
 .actual-temperature h2{
@@ -97,42 +97,14 @@ li {
   font-size: 30px;
 }
 
-.monday h4 {
-  color: #fd8c04;
+.forecastInfo h5 {
+  text-transform: capitalize;
+  font-weight: lighter;
 }
 
-.tuesday h4 {
-  color: #93abd3;
-}
-
-.wednesday h4 {
-  color: #ec5858;
-}
-
-.thrusday h4 {
-  color: #93abd3;
-}
-
-.friday h4 {
-  color: #fd8c04;
-}
-
-.monday i {
-  color: #fd8c04;
-}
-
-.tuesday i {
-  color: #93abd3;
-}
-
-.wednesday i {
-  color: #ec5858;
-}
-
-.thrusday i {
-  color: #93abd3;
-}
-
-.friday i {
-  color: #fd8c04;
+.forecastInfo h4{
+  font-size: 35px;
+  line-height: 1.5;
+  font-weight: lighter;
+  padding-left: 10px;
 }
