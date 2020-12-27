@@ -60,8 +60,8 @@ li {
   text-align: center;
 }
 
-.selectedCity i {
-  color: #fd8c04;
+.selectedCity img {
+  width: 70px;
 }
 
 .selectedCity h4 {

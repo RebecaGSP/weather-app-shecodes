@@ -19,7 +19,6 @@ function formatDate(timestamp) {
     "Saturday"
   ];
   let day = weekDay[date.getDay()];
-  //let formattedDate = `${weekDay}, ${hour}: ${minutes}`;
   return `${day}, ${hour}:${minutes}`;
 }
 
@@ -42,8 +41,6 @@ function farenheitUnits(event) {
 let farenheit = document.querySelector("#farenheit");
 farenheit.addEventListener("click", farenheitUnits);
 
-
-//Week 5
 //City search
 function getTemperature(response) {
   console.log(response.data)
@@ -54,6 +51,8 @@ function getTemperature(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#current-date").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
@@ -71,8 +70,7 @@ function handleSubmit(event) {
 let citySubmit = document.querySelector("#search-form");
 citySubmit.addEventListener("submit", handleSubmit);
 
-//Bonus Feature
-
+//Display current location
 function handlePosition(position) {
   let apiKey = "48b09ccbd64506cbc4fe7db34fbff847";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
@@ -80,7 +78,6 @@ function handlePosition(position) {
   let longitude = position.coords.longitude;
   let units = "metric";
   let weatherUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  console.log(weatherUrl);
   axios.get(weatherUrl).then(getTemperature);
 }
 
