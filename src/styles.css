@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Kaushan+Script&display=swap");
 
 h1 {
-  text-align: left;
   width: 100%;
   font-family: "Kaushan Script";
 }
@@ -12,8 +11,39 @@ p {
   margin-bottom: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-weight: lighter;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.weather-app-wrapper {
+  max-width: 80%; 
+  display: block; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
 .weatherInfo i {
   font-size: 60px;
+  
+}
+
+.actual-temperature h2{
+  font-size: 60px;
+  line-height: 1;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+.actual-temperature span{
+  font-weight: lighter;
 }
 
 .title {
@@ -30,12 +60,13 @@ p {
   text-align: center;
 }
 
-.selectedCity h2 {
+.selectedCity i {
   color: #fd8c04;
 }
 
-.selectedCity i {
-  color: #fd8c04;
+.selectedCity h5 {
+  text-transform: capitalize;
+  font-weight: lighter;
 }
 
 .monday h4 {
@@ -89,9 +120,6 @@ p {
   font-size: 30px;
 }
 
-.actual-temperature {
-  font-size: 50px;
-}
 
 .celsius {
   font-size: 15px;
